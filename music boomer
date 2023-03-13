@@ -1,0 +1,17 @@
+import time
+import webbrowser
+
+# Define the URL for Spotify and the artist's name
+spotify_url = "https://open.spotify.com/search/"
+artist_name = "The Weeknd"
+
+# Loop to open a new Chrome tab with the artist's page every 10 seconds
+while True:
+    # Construct the URL for the artist's page on Spotify
+    artist_url = spotify_url + artist_name.replace(" ", "%20")
+    
+    # Open a new Chrome tab with the artist's page
+    webbrowser.get('chrome').open_new_tab(artist_url)
+    
+    # Wait for 10 seconds before opening the next tab
+    time.sleep(10)
